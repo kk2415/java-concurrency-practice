@@ -24,6 +24,10 @@ public class SynchronizedExample {
         }
     }
 
+    /**
+     * void withdraw(int money) 메서드 안에 synchronized(this) {} 블럭으로
+     * 자기 자신을 동기화함
+     * */
     static class Account {
 
         private int balance = 1000;
