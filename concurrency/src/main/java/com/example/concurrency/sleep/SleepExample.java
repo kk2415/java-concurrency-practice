@@ -7,7 +7,7 @@ public class SleepExample {
     /**
      * Thread.sleep(1000)을 통해 1초 동안 쓰레드를 멈춘다.
      * */
-    public static void example1() {
+    public static void correctExample() {
         Thread thread = new Thread(() -> {
             System.out.println("example1 started");
 
@@ -34,7 +34,7 @@ public class SleepExample {
      * 그래서 sleep()은 static으로 선언되어 있으며 참조변수를 이용해서 호출하기 보다는
      * 'Thread.sleep(1000)'과 같이 해야 한다.
      * */
-    public static void example2() {
+    public static void wrongExample() {
         Thread thread1 = new Thread(() -> {
             IntStream.rangeClosed(0, 1_000_000).forEach((i) -> {});
             System.out.println("thread1 종료");
